@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Vollkorn&display=swap');
+:root {
+    --c-brand: #c0c0c0;
+    --c-brand-rgb: 248, 54, 145;
+    --c-dark: #fff;
+    --c-body: #fff;
+    --c-light: #fff;
+    --f-mainone: "Vollkorn", serif;
+    --f-maintwo: "Roboto", sans-serif;
+    --transition: all .4s cubic-bezier(.165, .84, .44, 1);
+    --shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: var(--f-mainone);
+    color: var(--c-body);
+    line-height: 1.7;
+    background-color: #0d0d0d;
+    cursor: url('/assets/images/Untitled\ design\ \(1\)\ \(1\).png'),auto;
+}
+
+h1,
+.h1 {
+    font-family: var(--f-maintwo);
+}
+
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-weight: 400;
+    font-family: var(--f-mainone);
+    color: var(--c-body);
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-body);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--c-brand);
+}
+
+img {
+    width: 100%;
+}
+
+.section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.setion-title {
+    max-width: 560px;
+    margin: 0 auto 60px auto;
+}
+
+.setion-title .line {
+    width: 60px;
+    height: 2px;
+    background-color: var(--c-brand);
+    display: inline-block;
+}
+
+.section-connector {
+    position: relative;
+}
+
+/* .section-connector::after {
+    content: '';
+    width: 2px;
+    height: 100px;
+    background-color: var(--c-brand);
+    position: absolute;
+    top: -50px;
+    left: 50%;
+} */
+
+
+
+/* NAVBAR */
+.navbar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: var(--transition);
+}
+
+#b1{
+    position:absolute;
+    top: 50%;
+}
+
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
+.navbar.scrolled {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #222;
+    box-shadow: var(--shadow);
+}
+
+.navbar .navbar-nav .nav-link {
+    font-weight: 400;
+    color: var(--c-dark);
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active  {
+    color: var(--c-brand);
+}
+
+
+
+/* Home */
+#home {
+    background-image: url(../images/Moon\ upper.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/* #aboutme {
+    background-image: url(../images/Moon\ lower.png);
+    background-position: center;
+    background-size: cover;
+} */
+
+
+
+
+/* SERVICES */
+.service-icon {
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-size: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-item {
+    height: 480px;
+  }
+  
+.c-img {
+height: 100%;
+object-fit: cover;
+filter: brightness(0.6);
+}
+
+
+.container {
+    position: relative;
+    display: inline-block;
+  }
+  
+.image {
+width: 100px; 
+height: auto;
+}
+
+.popup {
+position: absolute;
+top: 100%;
+left: 100;
+background-color: rgba(0, 0, 0, 0.15); 
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+padding: 20px; 
+visibility: hidden; 
+opacity: 0;
+transition: visibility 0s, opacity 1s ease-out;
+}
+
+.container:hover .popup {
+visibility: visible;
+opacity: 1; 
+}
+
+
+#about{
+    padding: 20px;
+    margin: 150px;
+}
+
+.carousel-caption{
+    top: 53%;
+    transform: translateY(-50%);
+}
+
+
+
+/* .image-1:hover + .image-2 {
+    display: block;
+    animation-delay: 100ms;
+  }
+  
+  .image-1:hover {
+    display: none;
+  } */
+
+
+
+/* Btn */
+.btn {
+    padding: 10px 24px;
+    border-radius: 0;
+    border-width: 2px;
+    font-weight: 500;
+}
+
+.btn-brand,
+.btn-brand:focus {
+    background-color: var(--c-brand);
+    color: white;
+    border-color: var(--c-brand);
+}
+
+.btn-brand:hover {
+    background-color: transparent;
+    color: var(--c-brand);
+    border-color: var(--c-brand);
+}
+
+
+/* Project */
+.project {
+    overflow: hidden;
+    position: relative;
+}
+
+.project .content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0d0d0d;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.project img, 
+.project .content {
+    transition: var(--transition);
+}
+
+.project:hover .content {
+    top: 0;
+}
+
+.project:hover img {
+    transform: translateY(-100%);
+}
+
+.footer{
+    background-color: #262626;
+}
